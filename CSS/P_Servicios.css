@@ -1,5 +1,88 @@
-
-  
-  
+* {
     
+    box-sizing: border-box;
+  }
+
+  body
+{
+
+margin: 0;
+
+}
+img {
+    max-width: 100%;
+  }
+  #NAVBAR{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
   
+
+  }
+  nav {
+    float: left;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+   margin: 0 ;
+   
+
+  }
+  
+  nav ul {
+    list-style: none;
+    overflow: hidden; 
+   margin-top: 10px;
+  }
+  
+  nav ul li {
+    float: left;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+   
+  }
+  nav ul li a {
+    display: block;
+    padding: 10px;
+    color:rgb(81, 79, 77);
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+  }
+
+  nav ul li:hover {
+    background: rgb(100,204,204);
+  }
+ 
+#Logo_a{
+
+width: 60px;
+height: 60px;
+
+  }
+#Logo_a{
+    background-color: rgb(255, 255, 255)
+}
+#Logo_Insta{
+width:40px;
+height: 40px;
+background-color: rgb(255, 255, 255);
+}
+.push{
+
+margin-left: 650px;
+
+}
+ 
+ #container_Servicios{ 
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(100,204,204);
+    width: 100%;
+
+ } 
+ 
+

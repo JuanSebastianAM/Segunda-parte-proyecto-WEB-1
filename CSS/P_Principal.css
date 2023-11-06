@@ -219,3 +219,203 @@ background-position: center top;
     right: 0;
     transform: translateX(100%);
   }
+
+  
+  .Container_elementos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(100,204,204);
+    margin-top: 60px;
+   
+  }
+  #Titulo_Primero{
+   color: rgb(81, 79, 77);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 40px;
+  margin-top: 60px;
+  margin-bottom: 30px;
+  }
+
+ #parrafo_introduccion{
+
+margin-left: 20%;
+margin-right: 20%;
+
+ }
+ #introduccion{
+
+  color: rgb(81, 79, 77);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20px;
+  margin-top: 20px;
+
+ }
+  #contendeor_textos{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(100,204,204);
+margin-bottom: 60px;
+  }
+
+  #Contenedor_Parrafo1{
+margin-left: 20%;
+margin-right: 5%;
+ 
+}
+ 
+  #Contenedor_Parrafo2{
+    margin-left: 5%;
+    margin-right: 20%;
+    
+  }
+
+
+     #Parrafo_Primero{
+   color: rgb(81, 79, 77);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20px;
+  margin-top: 30px;
+  }
+  .Container_elementos_2{
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(216,231,234);
+ 
+   
+  }
+#imagen_Odontologo{
+height: 30vw;
+width: 30vw;
+
+}
+#Contenedor_Parrafo3{
+
+margin-left: 10%;
+margin-right: 10%;
+
+}
+
+#parrafo_imagen{
+  color: rgb(81, 79, 77);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20px;
+  margin-top: 30px;
+
+
+}
+
+
+/* Panels. */
+.splitview {
+  position: relative;
+  width: 100%;
+  min-height: 45vw;
+  overflow: hidden;
+}
+
+.panel {
+  position: absolute;
+  width: 100vw;
+  min-height: 45vw;
+  overflow: hidden;
+}
+
+  .panel .content {
+      position: absolute;
+      width: 100vw;
+      min-height: 45vw;
+      color: #FFF;
+  }
+
+  .panel .description {
+      width: 25%;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: center;
+  }
+
+  .panel img {
+      box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.15);
+      width: 35%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+
+
+.bottom {
+  background-color: rgb(44, 44, 44);
+  z-index: 1;
+}
+
+  .bottom .description {
+      right: 5%;
+  }
+
+.top {
+  background-color: rgb(77, 69, 173);
+  z-index: 2;
+  width: 50vw;
+
+  /*-webkit-clip-path: polygon(60% 0, 100% 0, 100% 100%, 40% 100%);
+  clip-path: polygon(60% 0, 100% 0, 100% 100%, 40% 100%);*/
+}
+
+  .top .description {
+      left: 5%;
+  }
+
+/* Handle. */
+.handle {
+  height: 100%;
+  position: absolute;
+  display: block;
+  background-color: rgb(253, 171, 0);
+  width: 5px;
+  top: 0;
+  left: 50%;
+  z-index: 3;
+}
+
+/* Skewed. */
+.skewed .handle {
+  top: 50%;
+  transform: rotate(30deg) translateY(-50%);
+  height: 200%;
+  -webkit-transform-origin: top;
+  -moz-transform-origin: top;
+  transform-origin: top;
+}
+
+.skewed .top {
+  transform: skew(-30deg);
+  margin-left: -1000px;
+  width: calc(50vw + 1000px);
+}
+
+.skewed .top .content {
+  transform: skew(30deg);
+  margin-left: 1000px;
+}
+
+/* Responsive. */
+@media (max-width: 900px) {
+  body {
+      font-size: 75%;
+  }
+}
+
+
+
+
+
+
+  

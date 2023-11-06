@@ -1,22 +1,22 @@
 let slide_data = [
     {
       src:
-        "https://images.unsplash.com/photo-1506765336936-bb05e7e06295?ixlib=rb-0.3.5&s=d40582dbbbb66c7e0812854374194c2e&auto=format&fit=crop&w=1050&q=80",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHaf4_uacFvjUSzSBWEYFpuj2gh7zFjH-iIQ&usqp=CAU",
       
     },
     {
       src:
-        "https://images.unsplash.com/photo-1496309732348-3627f3f040ee?ixlib=rb-0.3.5&s=4d04f3d5a488db4031d90f5a1fbba42d&auto=format&fit=crop&w=1050&q=80",
+        "https://m.guiamedica.com.pe/perfiles/descargar/9889",
       
     },
     {
       src:
-        "https://images.unsplash.com/photo-1504271863819-d279190bf871?ixlib=rb-0.3.5&s=7a2b986d405a04b3f9be2e56b2be40dc&auto=format&fit=crop&w=334&q=80",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDJA023wLNytEMAobC16KVIg3Ok_Iy3ykCUg&usqp=CAU",
      
     },
     {
       src:
-        "https://images.unsplash.com/photo-1478728073286-db190d3d8ce6?ixlib=rb-0.3.5&s=87131a6b538ed72b25d9e0fc4bf8df5b&auto=format&fit=crop&w=1050&q=80",
+      "https://www.elempleo.com/colombia/files/basesempresariales/dentisalud/image/cab_dentisalud.jpg",
       
     }
   ];
@@ -73,11 +73,10 @@ let slide_data = [
     leftSlider.appendChild(slide);
     container.appendChild(caption);
   }
-  // console.log(slides);
+ 
   
   function nextSlide() {
-    // caption.classList.add('offscreen');
-  
+    
     slides[0].classList.remove("current");
     slides[0].classList.add("previous", "change");
     slides[1].classList.remove("next");
@@ -97,7 +96,7 @@ let slide_data = [
   }
   
   
-  // https://jonsuh.com/blog/detect-the-end-of-css-animations-and-transitions-with-javascript/
+ 
   function whichTransitionEvent() {
     var t,
       el = document.createElement("fakeelement");
@@ -125,4 +124,4 @@ let slide_data = [
  
   }
 
- 
+  

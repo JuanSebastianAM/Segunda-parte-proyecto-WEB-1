@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'citas.apps.CitasConfig',
+    'odontologos.apps.OdontologosConfig',
+    'commons.apps.CommonsConfig',
 ]
 
 MIDDLEWARE = [

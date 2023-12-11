@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extrahead %} 
+<title>VerCita</title>
+{% endblock extrahead %}
+
+{% block content %} 
+  <h1 class="display-3" id="title">Ver Cita</h1>
+
+  <body>
+    <h1 id="titulovercitas">Detalles de la Cita</h1>
+
+    <div>
+      <strong>Título:</strong> <strong>{{ cita.Titulo }}</strong>
+    </div>
+
+    <div>
+      <strong>Código:</strong> <strong>{{ cita.Codigocita }}</strong>
+    </div>
+
+    <div>
+      <strong>Fecha:</strong> <strong>{{ cita.fecha }}</strong>
+    </div>
+
+    <div>
+      <strong>Odontólogo:</strong><strong> {{ cita.Nombre_Odontologo }}</strong>
+    </div>
+
+    <a href="{% url 'gestionCitas' %}" class="btn btn-primary">Volver</a>
+  </body>
+
+  <style>
+    #title {
+      color: #008080;
+    }
+
+    #titulovercitas {
+      color: #008080;
+    }
+
+    strong {
+      color: #000;
+    }
+
+   
+  </style>
+{% endblock content %}

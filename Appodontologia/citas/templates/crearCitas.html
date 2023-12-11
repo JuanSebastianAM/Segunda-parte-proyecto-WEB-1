@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extrahead %} 
+<title>crearNota</title>
+{% endblock extrahead%}
+
+{% block content %} 
+<h1 class="display-3" id="title">Agendar Cita</h1>
+<p>Ingrese los datos de la Nueva Cita</p>
+<div class="container formulario">
+    <form method="POST" enctype="multipart/form-data" class="center-form">
+
+        <!-- Security token -->
+        {% csrf_token %}
+
+        <!-- Using the formset -->
+        <table class="table">
+            {{ form.as_table }}
+        </table>
+
+        <input type="submit" value="Guardar" class="btn btn-success">
+        <a type="button" class="btn btn-danger" href="{% url 'gestionCitas' %}">Cancelar</a>
+    </form>   
+</div>
+
+<style>
+
+    #title {
+      color: #008080; /* Cambia el color del título a verde oscuro (puedes ajustar el código de color según tus preferencias) */
+    }
+  
+    p {
+      color: #333; /* Cambia el color del párrafo a un tono más oscuro de gris */
+    }
+  
+    .pagination a {
+      color: #008080; /* Cambia el color de los enlaces de paginación a verde oscuro */
+    }
+  
+    .pagination .current {
+      color: #000; /* Cambia el color del número de página actual a negro */
+    }
+    .formulario {
+        width: 50%; /* Ajusta el ancho del formulario según tus necesidades */
+        margin: auto; /* Centra el formulario horizontalmente */
+        padding: 20px; /* Añade espacio interno alrededor del formulario */
+    }
+
+    .center-form {
+        text-align: center; /* Centra los elementos internos del formulario */
+    }
+  
+     form{
+      margin-left:175px
+      
+      
+     }
+  </style>
+
+{% endblock content%}

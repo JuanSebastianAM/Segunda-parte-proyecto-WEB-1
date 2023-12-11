@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extrahead %} 
+<title>Detalle</title>
+<link rel="stylesheet" href="{% static '/css/detalle.css' %}" >
+{% endblock extrahead%}
+
+{% block content %} 
+<h1 class="display-4" id="title">Detalle Cita</h1>
+<a type="button" class="btn btn-success" href="{% url 'CitasIndex' %}">Volver</a>
+
+<div class="row">
+    <div class="col col-sm">
+        
+    </div>
+    <div class="col col-sm">
+        <table class="table">
+            <tbody>
+              <tr>
+                <th scope="row">ID</th>
+                <td>{{ Cita.id }}</td>
+              </tr>
+              <tr>
+                <th scope="row">Titulo</th>
+                <td>{{ Cita.Titulo }}</td>
+              </tr>
+              <tr>
+                <th scope="row">Nota</th>
+                <td>{{ Cita.Nombre_Odontologo }}</td>
+              </tr>
+            </tbody>
+          </table>
+
+    </div>
+
+</div>
+
+{% endblock content%}

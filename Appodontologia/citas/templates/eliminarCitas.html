@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extrahead %} 
+<title>eliminarCita</title>
+{% endblock extrahead%}
+
+{% block content %} 
+<h1 class="display-3" id="title">Eliminar Cita</h1>
+<p>Elimine los datos de la Cita</p>
+<form method="POST">
+    <!-- Security token by Django -->
+    {% csrf_token %}
+    Esta seguro de eliminar esta Cita?
+    <input type="submit" value="Si"  class="btn btn-success"  />
+    <a href="{% url 'gestionCitas' %}"  class="btn btn-danger" >Cancel </a>
+</form> 
+
+
+{% endblock content%}

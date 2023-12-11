@@ -57,7 +57,7 @@ height: 60px;
 #Logo_a{
     background-color: rgb(255, 255, 255)
 }
-#Logo_Insta{
+#Logo_Insta li:hover{
 width:40px;
 height: 40px;
 background-color: rgb(255, 255, 255)

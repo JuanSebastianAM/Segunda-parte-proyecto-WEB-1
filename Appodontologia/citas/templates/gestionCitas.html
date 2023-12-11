@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extrahead %} 
+<title>Gestion</title>
+{% endblock extrahead%}
+
+{% block content %} 
+<h1 class="display-2" id="title">Gestión</h1>
+<p>En este menú se pueden gestionar las Citas</p>
+<a type="button" class="btn btn-success" href="{% url 'crearCitas' %}">Crear Citas</a>
+
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Titulo</th>
+        <th scope="col">Fecha</th>
+        <th scope="col">Odontologo</th>
+        <th scope="col">Acciones</th>
+        
+        
+      </tr>
+    </thead>
+    <tbody>
+      {% for Cita in page_obj %}
+      <tr>
+        <th scope="row">{{ Cita.id }}</th>
+        <td>{{ Cita.Titulo|upper }}</td>
+        <td>{{ Cita.fecha }}</td>
+        <td>{{ Cita.Nombre_Odontologo }}</td>
+        
+        <td>
+          <a type="button-sm" class="btn btn-sm btn-secondary" href="{% url 'verCitas' Cita.id %}">Ver</a>
+          <a type="button-sm" class="btn btn-sm btn-primary" href="{% url 'editarCitas' Cita.id %}">Editar</a>
+            <a type="button-sm" class="btn btn-sm btn-danger" href="{% url 'eliminarCitas' Cita.id %}">Borrar</a>
+            
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+
+<div class="pagination">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+            <a href="?page=1">&laquo; first</a>
+            <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+        </span>
+
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">next</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </span>
+</div>
+<style>
+
+  #title {
+    color: #008080; /* Cambia el color del título a verde oscuro (puedes ajustar el código de color según tus preferencias) */
+  }
+
+  p {
+    color: #333; /* Cambia el color del párrafo a un tono más oscuro de gris */
+  }
+
+  .pagination a {
+    color: #008080; /* Cambia el color de los enlaces de paginación a verde oscuro */
+  }
+
+  .pagination .current {
+    color: #000; /* Cambia el color del número de página actual a negro */
+  }
+
+
+</style>
+
+{% endblock content%}

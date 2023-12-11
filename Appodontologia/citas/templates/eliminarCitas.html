@@ -11,10 +11,29 @@
 <form method="POST">
     <!-- Security token by Django -->
     {% csrf_token %}
-    Esta seguro de eliminar esta Cita?
+    <p>¿Esta seguro que quiere eliminar la cita?</p>
     <input type="submit" value="Si"  class="btn btn-success"  />
     <a href="{% url 'gestionCitas' %}"  class="btn btn-danger" >Cancel </a>
 </form> 
+<style>
 
+    #title {
+      color: #008080; /* Cambia el color del título a verde oscuro (puedes ajustar el código de color según tus preferencias) */
+    }
+  
+    p {
+      color: #333; /* Cambia el color del párrafo a un tono más oscuro de gris */
+    }
+  
+    .pagination a {
+      color: #008080; /* Cambia el color de los enlaces de paginación a verde oscuro */
+    }
+  
+    .pagination .current {
+      color: #000; /* Cambia el color del número de página actual a negro */
+    }
+  
+  
+  </style>
 
 {% endblock content%}
